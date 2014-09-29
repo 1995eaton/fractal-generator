@@ -24,35 +24,37 @@ int main(void) {
     0x6a3403
   };
 
-  julia_t jopt = {
-    1920,
-    1080,
-    1,
-    0,
-    0,
-    1,
-    0,
-    350,
-    0xffffff,
-    pallet,
-    sizeof(pallet) / sizeof(int)
-  };
-
-  /* mandelbrot_t mopt = { */
-  /*   3*1920, */
-  /*   3*1080, */
-  /*   0.85, */
-  /*   -0.5, */
+  /* julia_t jopt = { */
+  /*   1920, */
+  /*   1080, */
+  /*   1, */
+  /*   0, */
   /*   0, */
   /*   1, */
   /*   0, */
-  /*   150, */
+  /*   350, */
   /*   0xffffff, */
   /*   pallet, */
-  /*   sizeof(pallet) / sizeof(int) */
+  /*   sizeof(pallet) / sizeof(int), */
+  /*   "output.png" */
   /* }; */
 
-  julia_set(jopt);
+  mandelbrot_t mopt = {
+    3*1920,
+    3*1080,
+    0.85,
+    -0.5,
+    0,
+    1,
+    0,
+    150,
+    0xffffff,
+    pallet,
+    sizeof(pallet) / sizeof(int),
+    "output.png"
+  };
+
+  mandelbrot_set(mopt);
 
   return 0;
 

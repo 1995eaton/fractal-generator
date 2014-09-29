@@ -45,7 +45,7 @@ void julia_set(julia_t opt) {
     }
   }
 
-  write_png(png, "output.png");
+  write_png(png, opt.outfile);
 
 }
 
@@ -86,6 +86,6 @@ void mandelbrot_set(mandelbrot_t opt) {
     }
   }
 
-  write_png(png, "output.png");
+  write_png(png, opt.outfile);
 
 }

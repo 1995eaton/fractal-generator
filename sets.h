@@ -17,6 +17,7 @@ typedef struct {
   uint32_t monochrome;   // A monochrome hex color used when u_pallet == false
   uint32_t *pallete;
   size_t pallete_size;
+  char *outfile;         // Where to write the PNG file to
 } renderopt_t;
 
 typedef renderopt_t mandelbrot_t;
