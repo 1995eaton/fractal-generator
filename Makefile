@@ -1,7 +1,7 @@
 CFLAGS=-c -std=c11 -O3 -Wall -Werror -pedantic
-LIBS=-lm -lpng16
+LIBS=-lm -lpng16 `pkg-config --cflags --libs gtk+-3.0`
 
-SRC=main.c sets.c render.c
+SRC=main.c sets.c render.c viewer.c
 
 OBJ=$(SRC:.c=.o)
 BUILD=fractal-generator
